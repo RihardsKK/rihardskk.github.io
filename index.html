@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rihards Karklins – IT, Automation, AI, Web</title>
+<meta name="description" content="I build practical digital solutions using automation, AI and modern web technologies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #13233A;
+    --navy-2: #1C3150;
+    --steel: #8FA3B8;
+    --paper: #EEF1F4;
+    --white: #FFFFFF;
+    --signal: #F4C542;
+    --ok: #4FA37A;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--paper); color: var(--navy);
+    font-family: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.0625rem; line-height: 1.6;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 1.5rem; }
+  a:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; }
+
+  /* HERO */
+  .hero { background: var(--navy); color: var(--white); padding: 5.5rem 0 4.5rem; }
+  .hero h1 {
+    font-stretch: 125%; font-weight: 900;
+    font-size: clamp(2.6rem, 9vw, 5.6rem);
+    line-height: .95; letter-spacing: -0.01em; margin: 0;
+  }
+  .hero .fields { color: var(--signal); font-weight: 700; letter-spacing: .08em; margin: 1.25rem 0 0; }
+  .hero .lead { font-size: 1.3rem; max-width: 30em; margin: 1rem 0 2rem; color: #DCE4EC; }
+  .btns { display: flex; flex-wrap: wrap; gap: .75rem; }
+  .btn {
+    display: inline-block; padding: .8rem 1.4rem; font-weight: 700; letter-spacing: .06em;
+    text-decoration: none; border: 2px solid var(--white); color: var(--white);
+  }
+  .btn.primary { background: var(--signal); border-color: var(--signal); color: var(--navy); }
+  .btn:hover { background: var(--white); color: var(--navy); border-color: var(--white); }
+  .based { margin-top: 2.5rem; font-size: .9rem; color: var(--steel); }
+
+  /* SECTIONS */
+  section { padding: 4.5rem 0 0; }
+  h2 {
+    font-stretch: 115%; font-weight: 800; font-size: 1.6rem; letter-spacing: .04em;
+    margin: 0 0 1.75rem; padding-bottom: .5rem; border-bottom: 3px solid var(--navy);
+  }
+
+  /* WHAT I DO */
+  .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0; border-top: 1px solid var(--steel); }
+  .services div { padding: 1.25rem 1.25rem 1.25rem 0; border-bottom: 1px solid var(--steel); }
+  .services h3 { font-size: 1rem; letter-spacing: .06em; margin: 0 0 .35rem; }
+  .services p { margin: 0; color: #4A5B6D; font-size: .98rem; }
+
+  /* PROJECTS: the one bold element */
+  .project {
+    background: var(--white); border-left: 6px solid var(--navy);
+    padding: 1.75rem 1.75rem 1.5rem; margin-bottom: 1.25rem;
+    display: grid; grid-template-columns: 4.5rem 1fr; gap: 0 1.25rem;
+  }
+  .num { font-stretch: 125%; font-weight: 900; font-size: 2.6rem; line-height: 1; color: var(--steel); }
+  .project .top { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; }
+  .project h3 { font-stretch: 110%; font-size: 1.4rem; line-height: 1.2; margin: 0; }
+  .status {
+    font-size: .75rem; font-weight: 800; letter-spacing: .06em; padding: .25rem .55rem;
+    background: var(--signal); color: var(--navy); transform: rotate(-2deg);
+  }
+  .status.live { background: var(--ok); color: var(--white); }
+  .project p { margin: .6rem 0 1rem; max-width: 38em; }
+  .project img { display: block; max-width: 100%; border: 1px solid #D5DDE5; margin-bottom: 1rem; }
+
+  .tags { display: flex; flex-wrap: wrap; gap: .45rem; padding: 0; margin: 0; list-style: none; }
+  .tags li { font-size: .82rem; font-weight: 600; padding: .2rem .6rem; border: 1.5px solid var(--navy-2); }
+
+  .sub { font-size: 1rem; letter-spacing: .04em; margin: 1.75rem 0 .75rem; }
+
+  /* ABOUT */
+  .about p { font-size: 1.2rem; max-width: 32em; margin: 0 0 1rem; }
+
+  /* CONTACT */
+  .contact { background: var(--navy); color: var(--white); margin-top: 5rem; padding: 4rem 0 3rem; }
+  .contact h2 { border-color: var(--signal); font-size: clamp(1.8rem, 5vw, 2.8rem); letter-spacing: 0; }
+  .links { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+  .links a { color: var(--white); font-weight: 700; font-size: 1.15rem; text-underline-offset: 5px; text-decoration-thickness: 2px; }
+  .contact small { display: block; margin-top: 3rem; color: var(--steel); }
+
+  @media (max-width: 560px) {
+    .project { grid-template-columns: 1fr; padding: 1.5rem 1.25rem; }
+    .num { font-size: 1.8rem; margin-bottom: .5rem; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <h1>RIHARDS<br>KARKLINS</h1>
+    <p class="fields">IT • AUTOMATION • AI • WEB DEVELOPMENT</p>
+    <p class="lead">I build practical digital solutions using automation, AI and modern web technologies.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">VIEW PROJECTS</a>
+      <a class="btn" href="#contact">CONTACT</a>
+    </div>
+    <p class="based">Based in Germany 🇩🇪</p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <h2>WHAT I CAN DO</h2>
+    <div class="services">
+      <div><h3>AI &amp; AUTOMATION</h3><p>AI assistants, workflows and process automation.</p></div>
+      <div><h3>WEB DEVELOPMENT</h3><p>Modern websites and web applications.</p></div>
+      <div><h3>BUSINESS AUTOMATION</h3><p>Automating repetitive tasks and connecting tools.</p></div>
+      <div><h3>DATA &amp; SQL</h3><p>Data processing, databases and reporting.</p></div>
+      <div><h3>CUSTOM SOLUTIONS</h3><p>Turning business ideas into working digital tools.</p></div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>PROJECTS</h2>
+
+    <article class="project">
+      <div class="num">01</div>
+      <div>
+        <div class="top"><h3>Business Website with Product Catalog</h3><span class="status live">LIVE</span></div>
+        <p>Rebuilt an outdated company website into a modern landing page with a clear, mobile-friendly product catalog.</p>
+        <img src="images/project-1.png" alt="Business website with product catalog" loading="lazy">
+        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="num">02</div>
+      <div>
+        <div class="top"><h3>AI Automation System</h3><span class="status">IN PROGRESS</span></div>
+        <p>Automation project combining AI and business workflows: data comes in, AI summarizes it, and a report goes out by email.</p>
+        <img src="images/project-2.png" alt="AI automation workflow" loading="lazy">
+        <ul class="tags"><li>AI</li><li>Automation</li><li>Make</li><li>n8n</li></ul>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="num">03</div>
+      <div>
+        <div class="top"><h3>Meža nezāles – Firewood Business Website</h3><span class="status">IN PROGRESS</span></div>
+        <p>One-page website for a Latvian firewood business with offer, prices and contact.</p>
+        <img src="images/project-3.png" alt="Meža nezāles website" loading="lazy">
+        <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+      </div>
+    </article>
+  </section>
+
+  <section class="about">
+    <h2>ABOUT ME</h2>
+    <p>I'm an IT enthusiast focused on automation, AI and web development. I enjoy turning manual processes into simple and practical digital solutions.</p>
+    <p>Currently building projects, learning new technologies and looking for opportunities to work on real-world problems.</p>
+  </section>
+
+  <section>
+    <h2>TECHNOLOGIES</h2>
+    <ul class="tags">
+      <li>Python</li><li>JavaScript</li><li>React</li><li>SQL</li><li>HTML/CSS</li>
+      <li>Git</li><li>Make</li><li>n8n</li><li>AI</li><li>Excel</li><li>Power Query</li><li>Pivot Tables</li>
+    </ul>
+    <h3 class="sub">Industry know-how</h3>
+    <ul class="tags">
+      <li>Supply Chain</li><li>Warehouse &amp; Inventory</li><li>Logistics</li><li>Calibration (DAkkS)</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <h2>Have a project in mind? Let's talk.</h2>
+    <div class="links">
+      <a href="https://github.com/rihardskk">GitHub</a>
+      <a href="https://www.linkedin.com/in/rihards-karklins">LinkedIn</a>
+      <a href="mailto:r.karklins@gmail.com">Email</a>
+    </div>
+    <small>© 2026 Rihards Karklins</small>
+  </div>
+</footer>
+
+<script>
+  // Hides a project image until you add the real screenshot
+  document.querySelectorAll('.project img').forEach(img => {
+    img.addEventListener('error', () => img.remove());
+  });
+</script>
+</body>
+</html>
